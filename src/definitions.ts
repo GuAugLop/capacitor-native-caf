@@ -1,3 +1,3 @@
 export interface CafPlugin {
-  echo(options: { value: string }): Promise<{ value: string }>;
+  setApiKey(options: {api_key:string}): Promise<void>
 }
