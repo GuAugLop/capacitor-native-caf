@@ -11,12 +11,13 @@ class CafPlugin : Plugin() {
     fun verifyPolicy(call: PluginCall) {
         val personId = call.getString("personId")
         val jwt = call.getString("jwt")
-        if (personId == null || jwt == null) {
-            call.reject("missing params: jwt or personId ");
+        val policyId = call.getString("policyId")
+        if (personId == null || jwt == null || policyId == null) {
+            call.reject("missing params: jwt, personId or policyId ");
         } else {
             call.setKeepAlive(true);
             val identity = IdentityPlugin(this.activity)
-            getBridge().activity.runOnUiThread { identity.verifyPolicy(personId, jwt, call) }
+            getBridge().activity.runOnUiThread { identity.verifyPolicy(personId, jwt, policyId, call) }
 
         }
     }
