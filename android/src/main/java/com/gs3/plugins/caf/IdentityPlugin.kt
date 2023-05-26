@@ -15,7 +15,7 @@ import com.getcapacitor.PluginCall
 class IdentityPlugin(context: Context) {
     var context = context;
     private fun build(jwt: String): Identity {
-        return Identity.Builder("eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwZXJzb25JZCI6IjUwNzYzNTExODYyIiwiaXNzIjoiNjQ2ZjkwOTgwOTRlYjUwMDA4MTlmYjlmIiwiZXhwIjoxNjg1NTUxNTcxfQ.xv_o8D38yzaFiUlFBPnRAqdtr95FA1gws1tUqcxDvMg", this.context).build();
+        return Identity.Builder(jwt, this.context).build();
     }
     fun verifyPolicy(personId: String, jwt: String, call: PluginCall){
         var identity = this.build(jwt);
