@@ -1,3 +1,3 @@
 export interface CafPlugin {
-  setApiKey(options: {api_key:string}): Promise<void>
+  verifyPolicy(options: { personId: string; jwt: string }): Promise<any>;
 }

@@ -11,9 +11,27 @@ npx cap sync
 
 ## API
 
-<docgen-index></docgen-index>
+<docgen-index>
+
+* [`verifyPolicy(...)`](#verifypolicy)
+
+</docgen-index>
 
 <docgen-api>
-<!-- run docgen to generate docs from the source -->
-<!-- More info: https://github.com/ionic-team/capacitor-docgen -->
+<!--Update the source file JSDoc comments and rerun docgen to update the docs below-->
+
+### verifyPolicy(...)
+
+```typescript
+verifyPolicy(options: { personId: string; jwt: string; }) => Promise<any>
+```
+
+| Param         | Type                                            |
+| ------------- | ----------------------------------------------- |
+| **`options`** | <code>{ personId: string; jwt: string; }</code> |
+
+**Returns:** <code>Promise&lt;any&gt;</code>
+
+--------------------
+
 </docgen-api>
