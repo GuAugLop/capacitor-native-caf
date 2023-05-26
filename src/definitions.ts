@@ -1,3 +1,6 @@
 export interface CafPlugin {
-  verifyPolicy(options: { personId: string; jwt: string }): Promise<any>;
+  verifyPolicy(options: {
+    personId: string;
+    jwt: string;
+  }): Promise<{ isAuthorized: boolean; attestation?: string }>;
 }
