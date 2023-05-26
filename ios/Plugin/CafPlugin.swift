@@ -7,12 +7,12 @@ import Capacitor
  */
 @objc(CafPlugin)
 public class CafPlugin: CAPPlugin {
-    private let implementation = Caf()
-
-    @objc func echo(_ call: CAPPluginCall) {
-        let value = call.getString("value") ?? ""
-        call.resolve([
-            "value": implementation.echo(value)
-        ])
+    @objc func verifyPolicy(_ call: CAPPluginCall) {
+        call.keepAlive = true
+        let ident = Identity()
+        ident.initialize()
+        DispatchQueue.main.async {
+            ident.verifyPolicy()
+        }
     }
 }
