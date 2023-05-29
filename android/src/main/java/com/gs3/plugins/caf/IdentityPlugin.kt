@@ -1,7 +1,6 @@
 package com.gs3.plugins.caf
 
 import android.content.Context
-import android.util.Log
 import com.combateafraude.identity.input.Identity
 import com.combateafraude.identity.input.VerifyPolicyListener
 import com.combateafraude.identity.output.*
@@ -57,7 +56,6 @@ class IdentityPlugin(context: Context) {
                 } else if (failure is PolicyReason) {
                     // you are using a policy that we do not yet support
                     call.reject("Política de segurança não suportada.");
-
                 } else if (failure == null) {
                     call.reject("");
                 } else {

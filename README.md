@@ -14,6 +14,7 @@ npx cap sync
 <docgen-index>
 
 * [`verifyPolicy(...)`](#verifypolicy)
+* [`faceAuthenticator(...)`](#faceauthenticator)
 
 </docgen-index>
 
@@ -31,6 +32,21 @@ verifyPolicy(options: { personId: string; jwt: string; policyId: string; }) => P
 | **`options`** | <code>{ personId: string; jwt: string; policyId: string; }</code> |
 
 **Returns:** <code>Promise&lt;{ isAuthorized: boolean; attestation?: string; }&gt;</code>
+
+--------------------
+
+
+### faceAuthenticator(...)
+
+```typescript
+faceAuthenticator(options: { cpf: string; jwt: string; }) => Promise<any>
+```
+
+| Param         | Type                                       |
+| ------------- | ------------------------------------------ |
+| **`options`** | <code>{ cpf: string; jwt: string; }</code> |
+
+**Returns:** <code>Promise&lt;any&gt;</code>
 
 --------------------
 

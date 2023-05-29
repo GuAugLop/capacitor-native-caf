@@ -4,6 +4,6 @@ import type { CafPlugin } from './definitions';
 
 export class CafWeb extends WebPlugin implements CafPlugin {
   verifyPolicy(): Promise<any> {
-    return Promise.resolve(console.log('Not implemented in Web'));
+    throw new Error('Method not implemented.');
   }
 }
