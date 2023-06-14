@@ -9,10 +9,10 @@ import Capacitor
 public class CafPlugin: CAPPlugin {
     @objc func verifyPolicy(_ call: CAPPluginCall) {
         call.keepAlive = true
-        let ident = Identity()
-        ident.initialize()
+        let ident = IdentityPlugin()
+        ident.initialize(mobileToken: call.getString("jwt", ""), call: call)
         DispatchQueue.main.async {
-            ident.verifyPolicy()
+            ident.verifyPolicy(personID: call.getString("personId", ""), policyId: call.getString("policyId", ""));
         }
     }
 }

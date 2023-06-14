@@ -1,5 +1,5 @@
 //
-//  Identity.swift
+//  IdentityPlugin.swift
 //  CapacitorNativeCaf
 //
 //  Created by Vinícius Gonçalves de Andrade on 25/05/23.
