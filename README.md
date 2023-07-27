@@ -23,14 +23,14 @@ npx cap sync
 ### verifyPolicy(...)
 
 ```typescript
-verifyPolicy(options: { personId: string; jwt: string; policyId: string; }) => Promise<{ isAuthorized: boolean; attestation?: string; }>
+verifyPolicy(options: { personId: string; jwt: string; policyId: string; }) => Promise<{ isAuthorized: boolean; attestation?: string; registred: boolean; }>
 ```
 
 | Param         | Type                                                              |
 | ------------- | ----------------------------------------------------------------- |
 | **`options`** | <code>{ personId: string; jwt: string; policyId: string; }</code> |
 
-**Returns:** <code>Promise&lt;{ isAuthorized: boolean; attestation?: string; }&gt;</code>
+**Returns:** <code>Promise&lt;{ isAuthorized: boolean; attestation?: string; registred: boolean; }&gt;</code>
 
 --------------------
 

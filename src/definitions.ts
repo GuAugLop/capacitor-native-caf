@@ -3,5 +3,5 @@ export interface CafPlugin {
     personId: string;
     jwt: string;
     policyId: string;
-  }): Promise<{ isAuthorized: boolean; attestation?: string }>;
+  }): Promise<{ isAuthorized: boolean; attestation?: string, registred: boolean }>;
 }
