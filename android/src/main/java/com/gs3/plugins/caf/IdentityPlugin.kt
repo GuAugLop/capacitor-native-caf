@@ -35,7 +35,7 @@ class IdentityPlugin(context: Context) {
                 val ret = JSObject()
                 ret.put("isAuthorized", isAuthorized)
                 ret.put("registered", true)
-                ret.put("attestation", attestation)
+                ret.put("attestation", attestation2)
                 call.resolve(ret);
             }
 
