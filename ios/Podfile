@@ -1,11 +1,11 @@
-platform :ios, '12.0'
+platform :ios, '12.4'
 
 def capacitor_pods
   # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
   use_frameworks!
   pod 'Capacitor', :path => '../node_modules/@capacitor/ios'
   pod 'CapacitorCordova', :path => '../node_modules/@capacitor/ios'
-  pod 'IdentityNoSentry', '~> 1.1.0'
+  pod 'IdentityNoSentry', '1.1.4'
 end
 
 target 'Plugin' do
