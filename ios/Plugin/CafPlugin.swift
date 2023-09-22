@@ -48,6 +48,7 @@ public class CafPlugin: CAPPlugin {
                         call.resolve(ret)
                     }
                 case .onError(let error):
+                    print(error)
                     if let bridgeViewController = self.bridge?.viewController {
                         switch error {
                         case .PermissionReason(let permission):
