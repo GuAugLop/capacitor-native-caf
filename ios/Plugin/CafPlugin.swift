@@ -72,6 +72,13 @@ public class CafPlugin: CAPPlugin {
                                 call.resolve(ret)
                                 bridgeViewController.dismiss(animated: true, completion: nil)
                                 return
+                            } else if (code == 200) {
+                                ret["isAuthorized"] = false
+                                ret["registered"] = true
+                                ret["attestation"] = nil
+                                call.resolve(ret)
+                                bridgeViewController.dismiss(animated: true, completion: nil)
+                                return
                             } else {
                                 call.reject("Houve um problema interno de comunicação, tente novamente mais tarde!")
                                 bridgeViewController.dismiss(animated: true, completion: nil)
