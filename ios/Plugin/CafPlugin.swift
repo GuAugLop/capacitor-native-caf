@@ -17,7 +17,7 @@ public class CafPlugin: CAPPlugin {
         if (personId == nil || jwt == nil || policyId == nil) {
             call.reject("missing params: jwt, personId or policyId ");
         }
-        
+
         self.identity = IdentitySDK.Builder(mobileToken: jwt!).setStage(.PROD)
             .build()
         DispatchQueue.main.async {
@@ -64,8 +64,8 @@ public class CafPlugin: CAPPlugin {
                             bridgeViewController.dismiss(animated: true, completion: nil)
                             return
                         case .ServerReason(_, let code):
+                            var ret = JSObject()
                             if (code == 404) {
-                                var ret = JSObject()
                                 ret["isAuthorized"] = false
                                 ret["registered"] = false
                                 ret["attestation"] = nil
